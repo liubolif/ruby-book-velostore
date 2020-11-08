@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString1
+  description: MyText
+  image_url: velo_1.jpeg
+  price: 999.99
+
+two:
+  title: MyString2
+  description: MyText
+  image_url: velo_1.jpeg
+  price: 9999.99
+
+ruby:
+  title: Bike 8100 Ultra
+  description: The new generation of fast top class bicycle
+  price: 4999.50
+  image_url: velo_2.jpeg
