@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Carts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carts.each do |cart| %>
+      <tr>
+        <td><%= link_to 'Показати', cart %></td>
+        <td><%= link_to 'Змінити', edit_cart_path(cart) %></td>
+        <td><%= link_to 'Знищити', cart, method: :delete, data: { confirm: 'Ви впевнені?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Новий кошик', new_cart_path %>
