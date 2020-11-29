@@ -1,0 +1,8 @@
+<h3>Velostore</h3>
+<p>
+  Повідомляємо вас про те, що ваше замовлення було відправлено:
+</p>
+<table>
+  <tr><th colspan="2">Qty</th><th>Description</th></tr>
+  <%= render @order.line_items -%>
+</table>
