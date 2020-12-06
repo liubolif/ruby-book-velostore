@@ -6,8 +6,8 @@ class StoreControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'nav.side_nav a', minimum: 4
     assert_select 'main ul.catalog li', 3
-    assert_select 'h2', 'Велосипед Comanche Tomahawk'
-    assert_select '.price', /[,\d]+\.\d\d₴/
+    assert_select 'h2', 'Bicycle Comanche Tomahawk'
+    assert_select '.price', /\$[,\d]+\.\d\d/
   end
 
 end
