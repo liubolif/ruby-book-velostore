@@ -45,7 +45,7 @@ es:
 
   store:
     index:
-      title_html:  "Su Cat&aacute;logo de Pragmatic"
+      title_html:  "Su Cat&aacute;logo de Velostore"
       add_html:    "A&ntilde;adir al Carrito"
 
   orders:
