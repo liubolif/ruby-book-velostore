@@ -42,6 +42,6 @@ class UsersTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "User was successfully destroyed"
+    assert_text "User Arthur deleted"
   end
 end
