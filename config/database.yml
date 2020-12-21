@@ -4,90 +4,83 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 
+# WORKING
 #default: &default
-#  adapter: postgresql
-#  encoding: unicode
+#  adapter: sqlite3
 #  pool: <%#= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 #  timeout: 5000
-#  username: postgres
-#  host: postgres
 
 #development:
 #  <<: *default
-#  database: my_database_development
+#  database: db/development.sqlite3
 
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
 #test:
 #  <<: *default
-#  database: my_database_test
+#  database: db/test.sqlite3
 
 #production:
 #  <<: *default
-#  database: my_database_production
+#  database: db/production.sqlite3
 
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  username: <%= ENV['POSTGRES_USER'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
-  host: <%= ENV['POSTGRES_HOST'] %>
+# ^^^WORKING^^^
+
+#default: &default
+#  adapter: postgresql
+#  encoding: unicode
+#  pool: 5
+
+#development:
+#  <<: *default
+#  database: database_name1
+#  username: liubomyr
+#  password: '—-'
+
+#test:
+#  <<: *default
+#  database: database_name1
+#  username: liubomyr
+#  password: '—-'
+
+#production:
+#  <<: *default
+#  database: database_name1
+#  username: liubomyr
+#  password: '—-'
+
+
+#development:
+#  adapter: postgresql
+#  database: db/my_database_development
+#  pool: 5
+#  timeout: 5000
+#test:
+#  adapter: postgresql
+#  database: db/my_database_test
+#  pool: 5
+#  timeout: 5000
+
+#production:
+#  adapter: postgresql
+#  database: db/my_database_production
+#  pool: 5
+#  timeout: 5000
 
 development:
-  <<: *default
-  database: fullstack-challenge
-
+  adapter: postgresql
+  database: db/my_database_development1
+  pool: 5
+  timeout: 5000
 test:
-  <<: *default
-  database: testdb
+  adapter: postgresql
+  database: db/my_database_test1
+  pool: 5
+  timeout: 5000
 
 production:
   adapter: postgresql
-  encoding: unicode
+  database: db/my_database_production1
   pool: 5
-  url: <%= ENV['DATABASE_URL'] %>
-
-
-#default: &default
-#  adapter: postgresql
-#  encoding: unicode
-#  pool: 5
-
-
-#development:
-#  <<: *default
-#  database: database_name
-#  username: liubomyr
-#  password: '—-'
-
-#test:
-#  <<: *default
-#  database: database_name
-#  username: liubomyr
-#  password: '—-'
-
-#production:
-#  <<: *default
-#  database: database_name
-#  username: liubomyr
-#  password: '—-'
-
-
-
-
-#development:
-#  adapter: postgresql
-#  database: my_database_development
-#  pool: 5
-#  timeout: 5000
-
-#test:
-#  adapter: postgresql
-#  database: my_database_test
-#  pool: 5
-#  timeout: 5000
-
-#production:
-#  adapter: postgresql
-#  database: my_database_production
-#  pool: 5
-#  timeout: 5000
+  timeout: 5000
